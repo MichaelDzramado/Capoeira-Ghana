@@ -1,4 +1,5 @@
 import { Button } from "@capoeira-ghana/ui";
+import { ClassesSection } from "@/components/classes/classes-section";
 import { ProgramsSection } from "@/components/programs/programs-section";
 
 export default function Home() {
@@ -29,10 +30,7 @@ export default function Home() {
                 Explore Programs
               </Button>
 
-              <Button
-                href="/book-a-trial"
-                variant="secondary"
-              >
+              <Button href="/book-a-trial" variant="secondary">
                 Book a Trial
               </Button>
             </div>
@@ -84,6 +82,8 @@ export default function Home() {
       </section>
 
       <ProgramsSection />
+
+      <ClassesSection />
     </main>
   );
 }
