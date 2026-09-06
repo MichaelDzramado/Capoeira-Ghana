@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import { SiteHeader } from "../components/site-header";
+import { SiteFooter } from "../components/site-footer";
 import "./globals.css";
 
 const geist = Geist({
@@ -23,7 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geist.variable} antialiased`}>
-      <body>{children}</body>
+      <body className="min-h-screen">
+        <SiteHeader />
+        <div className="flex min-h-[calc(100vh-5rem)] flex-col">
+          {children}
+        </div>
+        <SiteFooter />
+      </body>
     </html>
   );
 }

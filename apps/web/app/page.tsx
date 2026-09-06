@@ -3,7 +3,7 @@ import { Button } from "@capoeira-ghana/ui";
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <section className="flex min-h-screen items-center justify-center px-6">
+      <section className="flex min-h-[calc(100vh-5rem)] items-center justify-center px-6">
         <div className="mx-auto max-w-3xl text-center">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
             Capoeira Ghana

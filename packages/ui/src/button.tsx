@@ -25,7 +25,7 @@ type ButtonProps = ButtonElementProps | LinkElementProps;
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-[var(--primary)] text-white hover:bg-[var(--primary-dark)]",
+  "bg-[var(--primary)] !text-white hover:bg-[var(--primary-dark)]",
   secondary:
     "bg-[var(--accent)] text-black hover:opacity-90",
   outline:
