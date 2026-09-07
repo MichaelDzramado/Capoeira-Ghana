@@ -1,19 +1,16 @@
 @import "tailwindcss";
 
-@source "../../packages/ui/src/**/*.tsx";
+@source "../../../node_modules/@capoeira-ghana/ui/src";
 
 :root {
   --background: #faf9f6;
   --foreground: #171717;
-
   --primary: #b91c1c;
   --primary-dark: #991b1b;
   --primary-foreground: #ffffff;
   --accent: #d4a017;
-
   --surface: #ffffff;
   --surface-muted: #f3f1ec;
-
   --border: #e5e2da;
   --muted: #6b6b6b;
 }
@@ -40,7 +37,6 @@ body {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
 }
 
@@ -48,6 +44,7 @@ button,
 a {
   -webkit-tap-highlight-color: transparent;
 }
+
 
 :focus-visible {
   outline: 3px solid var(--accent);

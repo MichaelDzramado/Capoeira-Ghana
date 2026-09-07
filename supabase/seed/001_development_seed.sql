@@ -1,4 +1,4 @@
--- ============================================================
+﻿-- ============================================================
 -- Project Ginga / Capoeira Ghana
 -- Development Seed Data
 -- Synthetic data only — never production data

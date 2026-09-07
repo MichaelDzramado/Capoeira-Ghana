@@ -41,7 +41,7 @@ export function SiteHeader() {
             </Link>
           ))}
 
-          <Button href="#trial" className="min-h-11 px-5 text-sm">
+          <Button href="/book-a-trial" className="min-h-11 px-5 text-sm">
             Book a Trial
           </Button>
         </nav>
