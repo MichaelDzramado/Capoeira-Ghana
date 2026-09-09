@@ -1,4 +1,4 @@
-﻿-- ============================================================
+-- ============================================================
 -- Project Ginga / Capoeira Ghana
 -- Development Seed Data
 -- Synthetic data only — never production data
@@ -415,13 +415,13 @@ insert into public.student_profiles
   (id, user_id, date_of_birth, joined_at)
 values
   (
-    '10000000-0000-0000-0000-000000000001',
+    '10000000-0000-4000-8000-000000000001',
     '00000000-0000-0000-0000-000000000003',
     '2010-05-12',
     current_date - interval '180 days'
   ),
   (
-    '10000000-0000-0000-0000-000000000002',
+    '10000000-0000-4000-8000-000000000002',
     '00000000-0000-0000-0000-000000000004',
     '2008-09-21',
     current_date - interval '120 days'
@@ -441,7 +441,7 @@ insert into public.instructor_profiles
   (id, user_id, bio, specialization, years_experience)
 values
   (
-    '30000000-0000-0000-0000-000000000001',
+    '30000000-0000-4000-8000-000000000001',
     '00000000-0000-0000-0000-000000000002',
     'Capoeira instructor focused on accessible, structured training.',
     'Fundamentals and youth training',
@@ -458,7 +458,7 @@ insert into public.parent_student
 values
   (
     '20000000-0000-0000-0000-000000000001',
-    '10000000-0000-0000-0000-000000000001',
+    '10000000-0000-4000-8000-000000000001',
     'Parent',
     true
   )
@@ -472,7 +472,7 @@ insert into public.classes
   (id, program_id, location_id, name, day_of_week,
    start_time, end_time, capacity)
 select
-  '40000000-0000-0000-0000-000000000001',
+  '40000000-0000-4000-8000-000000000001',
   p.id,
   l.id,
   'Saturday Kids Capoeira',
@@ -490,7 +490,7 @@ insert into public.classes
   (id, program_id, location_id, name, day_of_week,
    start_time, end_time, capacity)
 select
-  '40000000-0000-0000-0000-000000000002',
+  '40000000-0000-4000-8000-000000000002',
   p.id,
   l.id,
   'Tuesday Fundamentals',
@@ -508,7 +508,7 @@ insert into public.classes
   (id, program_id, location_id, name, day_of_week,
    start_time, end_time, capacity)
 select
-  '40000000-0000-0000-0000-000000000003',
+  '40000000-0000-4000-8000-000000000003',
   p.id,
   l.id,
   'Saturday Teen & Adult',
@@ -533,7 +533,7 @@ select
   i.id
 from public.classes c
 cross join public.instructor_profiles i
-where i.id = '30000000-0000-0000-0000-000000000001'
+where i.id = '30000000-0000-4000-8000-000000000001'
 on conflict do nothing;
 
 -- ============================================================
@@ -544,14 +544,14 @@ insert into public.enrollments
   (student_id, class_id, status, enrolled_at)
 values
   (
-    '10000000-0000-0000-0000-000000000001',
-    '40000000-0000-0000-0000-000000000002',
+    '10000000-0000-4000-8000-000000000001',
+    '40000000-0000-4000-8000-000000000002',
     'active',
     current_date - interval '170 days'
   ),
   (
-    '10000000-0000-0000-0000-000000000002',
-    '40000000-0000-0000-0000-000000000003',
+    '10000000-0000-4000-8000-000000000002',
+    '40000000-0000-4000-8000-000000000003',
     'active',
     current_date - interval '110 days'
   )
@@ -565,28 +565,28 @@ insert into public.class_sessions
   (id, class_id, session_date, start_time, end_time, instructor_id)
 values
   (
-    '50000000-0000-0000-0000-000000000001',
-    '40000000-0000-0000-0000-000000000002',
+    '50000000-0000-4000-8000-000000000001',
+    '40000000-0000-4000-8000-000000000002',
     current_date - 14,
     '18:00',
     '19:15',
-    '30000000-0000-0000-0000-000000000001'
+    '30000000-0000-4000-8000-000000000001'
   ),
   (
-    '50000000-0000-0000-0000-000000000002',
-    '40000000-0000-0000-0000-000000000002',
+    '50000000-0000-4000-8000-000000000002',
+    '40000000-0000-4000-8000-000000000002',
     current_date - 7,
     '18:00',
     '19:15',
-    '30000000-0000-0000-0000-000000000001'
+    '30000000-0000-4000-8000-000000000001'
   ),
   (
-    '50000000-0000-0000-0000-000000000003',
-    '40000000-0000-0000-0000-000000000003',
+    '50000000-0000-4000-8000-000000000003',
+    '40000000-0000-4000-8000-000000000003',
     current_date - 7,
     '10:30',
     '12:00',
-    '30000000-0000-0000-0000-000000000001'
+    '30000000-0000-4000-8000-000000000001'
   )
 on conflict do nothing;
 
@@ -598,20 +598,20 @@ insert into public.attendance
   (session_id, student_id, status, recorded_by)
 values
   (
-    '50000000-0000-0000-0000-000000000001',
-    '10000000-0000-0000-0000-000000000001',
+    '50000000-0000-4000-8000-000000000001',
+    '10000000-0000-4000-8000-000000000001',
     'present',
     '00000000-0000-0000-0000-000000000002'
   ),
   (
-    '50000000-0000-0000-0000-000000000002',
-    '10000000-0000-0000-0000-000000000001',
+    '50000000-0000-4000-8000-000000000002',
+    '10000000-0000-4000-8000-000000000001',
     'present',
     '00000000-0000-0000-0000-000000000002'
   ),
   (
-    '50000000-0000-0000-0000-000000000003',
-    '10000000-0000-0000-0000-000000000002',
+    '50000000-0000-4000-8000-000000000003',
+    '10000000-0000-4000-8000-000000000002',
     'late',
     '00000000-0000-0000-0000-000000000002'
   )
@@ -624,7 +624,7 @@ on conflict do nothing;
 insert into public.student_progress
   (student_id, current_belt_id, updated_by)
 select
-  '10000000-0000-0000-0000-000000000001',
+  '10000000-0000-4000-8000-000000000001',
   b.id,
   '00000000-0000-0000-0000-000000000002'
 from public.belts b
@@ -634,7 +634,7 @@ on conflict (student_id) do nothing;
 insert into public.student_progress
   (student_id, current_belt_id, updated_by)
 select
-  '10000000-0000-0000-0000-000000000002',
+  '10000000-0000-4000-8000-000000000002',
   b.id,
   '00000000-0000-0000-0000-000000000002'
 from public.belts b
@@ -644,10 +644,10 @@ on conflict (student_id) do nothing;
 insert into public.belt_history
   (student_id, belt_id, awarded_at, awarded_by)
 select
-  '10000000-0000-0000-0000-000000000001',
+  '10000000-0000-4000-8000-000000000001',
   b.id,
   current_date - 150,
-  '30000000-0000-0000-0000-000000000001'
+  '30000000-0000-4000-8000-000000000001'
 from public.belts b
 where b.name = 'Crua'
 on conflict do nothing;
@@ -655,10 +655,10 @@ on conflict do nothing;
 insert into public.belt_history
   (student_id, belt_id, awarded_at, awarded_by)
 select
-  '10000000-0000-0000-0000-000000000002',
+  '10000000-0000-4000-8000-000000000002',
   b.id,
   current_date - 90,
-  '30000000-0000-0000-0000-000000000001'
+  '30000000-0000-4000-8000-000000000001'
 from public.belts b
 where b.name = 'Crua'
 on conflict do nothing;
@@ -666,10 +666,10 @@ on conflict do nothing;
 insert into public.belt_history
   (student_id, belt_id, awarded_at, awarded_by)
 select
-  '10000000-0000-0000-0000-000000000002',
+  '10000000-0000-4000-8000-000000000002',
   b.id,
   current_date - 30,
-  '30000000-0000-0000-0000-000000000001'
+  '30000000-0000-4000-8000-000000000001'
 from public.belts b
 where b.name = 'Crua-Amarela'
 on conflict do nothing;
@@ -698,7 +698,7 @@ insert into public.event_registrations
   (event_id, student_id, status)
 select
   e.id,
-  '10000000-0000-0000-0000-000000000001',
+  '10000000-0000-4000-8000-000000000001',
   'registered'
 from public.events e
 where e.slug = 'capoeira-ghana-community-roda'

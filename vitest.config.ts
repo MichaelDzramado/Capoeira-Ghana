@@ -6,7 +6,7 @@ export default defineConfig({
     environment: "node",
     globals: true,
     include: [
-      "tests/unit/**/*.test.ts",
+      "tests/unit/**/*.test.{ts,tsx}",
       "tests/api/**/*.test.ts",
       "tests/integration/**/*.test.ts",
     ],
