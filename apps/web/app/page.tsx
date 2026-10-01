@@ -1,5 +1,6 @@
-import { Button } from "@capoeira-ghana/ui";
+﻿import { Button } from "@capoeira-ghana/ui";
 import { ClassesSection } from "@/components/classes/classes-section";
+import { ContentSections } from "@/components/content/content-sections";
 import { ProgramsSection } from "@/components/programs/programs-section";
 
 export default function Home() {
@@ -81,9 +82,30 @@ export default function Home() {
         </div>
       </section>
 
+      <ContentSections />
+
       <ProgramsSection />
 
       <ClassesSection />
+
+      <section className="bg-[var(--primary)] text-white">
+        <div className="mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold sm:text-4xl">
+            Ready to start your Capoeira journey?
+          </h2>
+
+          <p className="mx-auto mt-4 max-w-2xl text-white/85">
+            Come train, learn, connect, and grow with the Capoeira Ghana
+            community.
+          </p>
+
+          <div className="mt-8">
+            <Button href="/book-a-trial" variant="secondary">
+              Book a Trial
+            </Button>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
